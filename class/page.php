@@ -30,6 +30,14 @@ class Page {
         echo '</head>';
     }
 
+    public function tituloPagina($tituloPagina) {
+       return $tituloPagina;
+    }
+    public function subTituloPagina($subTitulo) {
+        return $subTitulo;
+    }
+    
+
     public function showMenu() {
         
     	while ( list($nome,$url) = each($this->buttons) ) {
@@ -38,7 +46,7 @@ class Page {
       
     }
     public function IsURLCurrentPage($url) {
-        if (strpos($GLOBALS['SCRIPT_NAME'], $url) == false) {
+        if (strpos($GLOBALS["SCRIPT_NAME"], $url) == false) {
             return false;
         } else {
             return true;
@@ -47,11 +55,10 @@ class Page {
     public function displayButton($nome,$url,$active = true) {
         if ($active) {
             echo '<ul class="ul_menu">';
-                    echo '<a href="'.$url.'">
-                    <li><a href="'.$url.'"><span class="menu_active">'.$nome.'</span></a></li>';
+                    echo '<li><a href="'.$url.'"><span class="menu_active">'.$nome.'</span></a></li>';
             echo '</ul>';
         } else {
-            echo '<span class="menu">'.$nome.'</span>';
+            echo '<span class="menu_active">'.$nome.'</span>';
         }
     }
 

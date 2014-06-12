@@ -1,6 +1,7 @@
 body {
-	background: silver;
+	background:#faf4f4;
 	font-family:verdana;
+	margin:0;
 }
 
 .ul_menu {
@@ -16,15 +17,36 @@ body {
 	text-decoration:none;
 	margin-left:5px;
 	padding:10px;
+	line-height:25px;
+	color:black;
 }
 
 .ul_menu li a:hover {
 	color:gray;
 }
-
 .menu {
 	color:black!important;
 }
 .menu_active {
-	color:#006699;
+	color:red!important;
+}
+header {
+	width:100%;
+	background:black;
+	color:white;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+header h1, h3, h4 {
+	margin:0;
+}
+header h4 {
+	color:#b1dbf0;
+}
+#inter-header {
+	margin-left:18px;
+}
+nav {
+	border-bottom:1px solid silver;
+	height:44px;
 }
