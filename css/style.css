@@ -1,0 +1,30 @@
+body {
+	background: silver;
+	font-family:verdana;
+}
+
+.ul_menu {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.ul_menu li {
+	float:left;
+}
+.ul_menu li a {
+	display:block;
+	text-decoration:none;
+	margin-left:5px;
+	padding:10px;
+}
+
+.ul_menu li a:hover {
+	color:gray;
+}
+
+.menu {
+	color:black!important;
+}
+.menu_active {
+	color:#006699;
+}
