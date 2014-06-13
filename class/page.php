@@ -10,6 +10,7 @@ class Page {
 	protected $utf = "UTF-8";
 	protected $buttons = array( 'Inicio'   => 'index.php',
 		                        'Serviços' => 'servicos.php',
+                                'Dicas' => 'dias.php',
 		                        'Contatos' => 'contatos.php'
                               ); 
 
@@ -64,7 +65,26 @@ class Page {
         }
     }
 
+    public function footer() {
+
+    }
+
 }
+
+//////////////////////////////////
+// Class Postagem padrão...
+////////////////////////////////
+ class Postagem extends Page {
+    protected $titulo;
+    protected $texto;
+ }
+
+////////////////////////////////////
+// Class Postagem com Thumbnail...
+///////////////////////////////////
+ class PostagemComImagem extends Postagem {
+    protected $imagem;
+ }
 
 
 

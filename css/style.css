@@ -50,3 +50,19 @@ nav {
 	border-bottom:1px solid silver;
 	height:44px;
 }
+.postagem {
+	padding:10px;
+}
+.postagem p {
+    font-size:15px;
+    color:gray;
+}
+.thumg {
+	display:block;
+	width:150px;
+	float:left;
+	padding:10px;
+	background:white;
+	border:1px solid silver;
+	margin-right:5px;
+}
