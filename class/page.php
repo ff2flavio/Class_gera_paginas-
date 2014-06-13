@@ -39,14 +39,18 @@ class Page {
     
 
     public function showMenu() {
+        echo '<ul class="ul_menu">';
         
     	while ( list($nome,$url) = each($this->buttons) ) {
-    		$this->displayButton($nome,$url,!$this->IsURLCurrentPage($url));
+            echo '<li>';
+    		 $this->displayButton($nome,$url,!$this->IsURLCurrentPage($url));
+            echo '</li>';
     	}
       
+        echo '</ul>';
     }
     public function IsURLCurrentPage($url) {
-        if (strpos($GLOBALS["SCRIPT_NAME"], $url) == false) {
+        if (strpos($_SERVER["SCRIPT_NAME"], $url) == false) {
             return false;
         } else {
             return true;
@@ -54,11 +58,9 @@ class Page {
     }
     public function displayButton($nome,$url,$active = true) {
         if ($active) {
-            echo '<ul class="ul_menu">';
-                    echo '<li><a href="'.$url.'"><span class="menu_active">'.$nome.'</span></a></li>';
-            echo '</ul>';
+            echo '<a href="'.$url.'">'.$nome.'</a>';
         } else {
-            echo '<span class="menu_active">'.$nome.'</span>';
+            echo '<a href="'.$url.'"><span class="menu_active">'.$nome.'</a></span>';
         }
     }
 
